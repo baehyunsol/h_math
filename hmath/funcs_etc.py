@@ -1,3 +1,14 @@
+from collections import deque
+from hmath import num
+
+
+add = num.add
+sub = num.sub
+mul = num.mul
+div = num.div
+reciprocal = num.reciprocal
+
+
 # int -> int
 def factorial(n):
 
