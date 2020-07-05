@@ -305,12 +305,15 @@ def root(x, order=2, accuracy=6):
 
 # num, int=7 -> num
 def ln(x, accuracy=7):
+  
+  if x[0] * x[1] <= 0:
+    raise ValueError
 
 	coeff = [1, 1]
 
 	while gt(x, (5, 6)):
 		x = root(x, 5, accuracy)
-		coeff = mul_int(coeff, 5)
+	  coeff = mul_int(coeff, 5)
 
 	# taylor series
 	x = sub(x, (1, 1))

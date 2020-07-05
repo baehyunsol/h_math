@@ -138,9 +138,9 @@ def continued_fraction_to_num(continued_fraction):
 	return result
 
 
-# y = f_prime(a_n)(x - a_n) + f(a_n)
-# a_n - f/f_prime
-# f -> f - y
+# func, func, num=(1, 0), num=(1, 0), int=8 -> num
+# each func:num->num
+# returns x that f(x) is y
 def newton_method(f, f_prime, y=(1, 0), begin=(1, 0), limit=8):
   
     a = begin
