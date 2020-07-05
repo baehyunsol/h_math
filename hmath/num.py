@@ -187,7 +187,7 @@ def str_to_num(string):
 		dot_index = string.index('.')
 
 	except ValueError:
-		return int(string)
+		return [1, int(string)]
 		
 	string = string[:dot_index] + string[dot_index + 1:]
 
