@@ -21,6 +21,10 @@ sech = funcs_math.sech
 csch = funcs_math.csch
 coth = funcs_math.coth
 
+asin = funcs_math.asin
+acos = funcs_math.acos
+atan = funcs_math.atan
+
 exp = funcs_math.exp
 root = funcs_math.root
 power = funcs_math.power
@@ -40,6 +44,7 @@ nutmet= funcs_etc.newton_method
 
 prf = funcs_etc.prime_factorial
 getdv = funcs_etc.get_divisors
+ispn = funcs_etc.is_pn
 
 str2num = num.str_to_num
 int2num = num.int_to_num
