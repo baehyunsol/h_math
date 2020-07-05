@@ -36,6 +36,8 @@ gcd = num.gcd
 fac = funcs_etc.factorial
 fib = funcs_etc.fibonacci
 
+nutmet= funcs_etc.newton_method
+
 prf = funcs_etc.prime_factorial
 getdv = funcs_etc.get_divisors
 

@@ -131,11 +131,27 @@ def continued_fraction_to_num(continued_fraction):
 	
 	result = [0, 1]
 
-	while len(con_fr) > 0:
+	while len(continued_fraction) > 0:
 		result = reciprocal(result)
-		result = add(result, (1, con_fr.pop()))
+		result = add(result, (1, continued_fraction.pop()))
 
 	return result
+
+
+# y = f_prime(a_n)(x - a_n) + f(a_n)
+# a_n - f/f_prime
+# f -> f - y
+def newton_method(f, f_prime, y=(1, 0), begin=(1, 0), limit=8):
+  
+    a = begin
+
+    while f_prime(a)[0] == 0 or f_prime(a)[1] == 0:
+        a = add(a, (1, 1))
+
+    for _ in range(limit):
+        a = sub(a, div(sub(f(a), y), f_prime(a)))
+
+    return a
 
 
 pn = [
